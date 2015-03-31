@@ -37,7 +37,7 @@ class Conexao {
 	const HOST_USUARIO = "root";
 	const HOST_SENHA = "";
 	const HOST_PORTA = "3306";
-	const DB_NOME = "framework";
+	const DB_NOME = "dbnameee";
 
 	public static $instance;
 
@@ -61,7 +61,6 @@ class Conexao {
 		} catch (Exception $e) {
 
 			Log::getInstance()->inserirLog("Classe: ".get_class($this)." | Metodo: ".__FUNCTION__." | Erro: Código: " . $e-> getCode() . " | Mensagem: " . $e->getMessage());
-			Login::getInstance()->logout("error/500");
 			
 		} 
 
